@@ -8,11 +8,11 @@ export type Broker =
   | 'adjust'
   | 'branch';
 
-interface SkarbSDKManagerType {
+interface ISkarbSDKManager {
   initializeSDK(
     clientId: string,
     isObservable: boolean,
-    deviceId: string,
+    deviceId?: string,
   ): void;
   sendSource(
     brokerName: Broker,
@@ -24,6 +24,6 @@ interface SkarbSDKManagerType {
 
 declare module 'react-native' {
   interface NativeModulesStatic {
-    SkarbSDKManager: SkarbSDKManagerType;
+    SkarbSDKManager: ISkarbSDKManager;
   }
 }

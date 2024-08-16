@@ -1185,6 +1185,8 @@ PODS:
     - React-logger (= 0.74.2)
     - React-perflogger (= 0.74.2)
     - React-utils (= 0.74.2)
+  - RNDeviceInfo (11.1.0):
+    - React-Core
   - SkarbSDK (0.6.16):
     - gRPC-Swift (= 1.8.0)
     - ReachabilitySwift (= 5.0.0)
@@ -1378,6 +1380,7 @@ DEPENDENCIES:
   - React-runtimescheduler (from `../node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - SkarbSDK
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1520,6 +1523,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1589,6 +1594,7 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 1f0b3361460921edcbe9042ce690e5ca6dab9639
   React-utils: 5a40a1bb87d8c2d42a6bbbb7ead6d95785ca6042
   ReactCommon: e5866ad8f7487779853fa3fe33f1c075207c3262
+  RNDeviceInfo: b899ce37a403a4dea52b7cb85e16e49c04a5b88e
   SkarbSDK: d6af42f58798e7e42b302c84d2ba5a1c88e303c1
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
   SwiftNIO: 829958aab300642625091f82fc2f49cb7cf4ef24

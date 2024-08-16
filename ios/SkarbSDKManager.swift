@@ -10,12 +10,13 @@ class SkarbSDKManager: NSObject {
         return true
     }
 
-    @objc
-    func initializeSDK(clientId: String, isObservable: Bool, deviceId: String) {
-        SkarbSDK.initialize(clientId: clientId, isObservable: isObservable, deviceId: deviceId)
+  @objc(initializeSDK:isObservable:deviceId:)
+    func initializeSDK(clientId: String, isObservable: Bool, deviceId: String?) {
+        SkarbSDK.initialize(clientId: clientId, isObservable: isObservable, deviceId: deviceId ?? nil)
     }
-
-    @objc
+  
+  
+  @objc(sendSource:features:brokerUserID:)
     func sendSource(brokerName: String, features: [String: Any], brokerUserID: String?) {
         let broker: SKBroker
         switch brokerName.lowercased() {
@@ -34,15 +35,15 @@ class SkarbSDKManager: NSObject {
         default:
             broker = .custom(brokerName)
         }
-        SkarbSDK.sendSource(broker: broker, features: features, brokerUserID: brokerUserID)
+        SkarbSDK.sendSource(broker: broker, features: features, brokerUserID: brokerUserID ?? nil)
     }
 
-    @objc
+  @objc(sendTest:group:)
     func sendTest(name: String, group: String) {
         SkarbSDK.sendTest(name: name, group: group)
     }
   
-    @objc 
+  @objc(setLoggingEnabled:)
     func setLoggingEnabled(enabled: Bool){
       SkarbSDK.isLoggingEnabled = enabled
     }
